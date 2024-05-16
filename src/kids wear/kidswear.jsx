@@ -2,6 +2,7 @@ import React from "react";
 import man1 from "../images/kid-01.jpg"
 import man2 from "../images/kid-02.jpg"
 import man3 from "../images/kid-03.jpg";
+import { Link } from "react-router-dom";
 
 
 function Kids() {
@@ -34,9 +35,8 @@ function Kids() {
     ]
     return (
         <>
-            <div className="men-section">
-                <button id="left"><i class="fa-solid fa-less-than"></i></button>
-                <button id="right"><i class="fa-solid fa-less-than fa-rotate-180"></i></button>
+            <div className="men-section" id="kid">
+
                 {
                     men.map((itm) => {
                         return (
@@ -45,15 +45,21 @@ function Kids() {
                                     <div className="man-img">
                                         <img src={itm.img} alt="" />
                                         <div className="shop">
-                                            <div className="view">
-                                                {itm.view}
-                                            </div>
-                                            <div className="view">
-                                                {itm.star}
-                                            </div>
-                                            <div className="view">
-                                                {itm.cart}
-                                            </div>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.view}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.star}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.cart}
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="title">

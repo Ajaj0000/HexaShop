@@ -2,6 +2,7 @@ import React from "react";
 import man1 from "../images/women-01.jpg"
 import man2 from "../images/women-02.jpg"
 import man3 from "../images/women-03.jpg";
+import { Link } from "react-router-dom";
 
 
 function Women() {
@@ -34,26 +35,31 @@ function Women() {
     ]
     return (
         <>
-            <div className="men-section">
-                <button id="left"><i class="fa-solid fa-less-than"></i></button>
-                <button id="right"><i class="fa-solid fa-less-than fa-rotate-180"></i></button>
+            <div className="men-section" id="women">
+
                 {
                     men.map((itm) => {
                         return (
                             <>
                                 <div className="men-products">
                                     <div className="man-img">
-                                        <img src={itm.img} alt="" />
+                                        <img src={itm.img} alt="img" />
                                         <div className="shop">
-                                            <div className="view">
-                                                {itm.view}
-                                            </div>
-                                            <div className="view">
-                                                {itm.star}
-                                            </div>
-                                            <div className="view">
-                                                {itm.cart}
-                                            </div>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.view}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.star}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.cart}
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="title">

@@ -1,43 +1,43 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import logo from "../images/logo.png"
+import logo from "../images/logo.png";
 
 function Header() {
     const list = [
         {
             id: "home",
             name: "Home",
-            path: "/home",
+            path: "#main-top",
         },
         {
             id: "men",
             name: "Men's",
-            path: "/men",
+            path: "#men",
         },
         {
             id: "men",
             name: "Women's",
-            path: "/women",
+            path: "#women",
         },
         {
             id: "men",
             name: "Kid's",
-            path: "/kid",
+            path: "#kid",
         },
         {
             id: "men",
             name: "Pages",
-            path: "/page",
+            path: "/about",
         },
         {
             id: "men",
             name: "Features",
-            path: "/home",
+            path: "/about",
         },
         {
             id: "men",
             name: "Explore",
-            path: "/explore",
+            path: "/about",
         },
 
     ]
@@ -53,7 +53,7 @@ function Header() {
                             list.map((nav) => {
                                 return (
                                     <>
-                                        <NavLink activeClassname="active" ><li id={nav.id}>{nav.name}</li></NavLink>
+                                        <NavLink activeClassname="active" to={nav.path} ><li id={nav.id}>{nav.name}</li></NavLink>
                                     </>
                                 )
                             })

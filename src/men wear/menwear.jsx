@@ -2,6 +2,7 @@ import React from "react";
 import man1 from "../images/men-01.jpg";
 import man2 from "../images/men-02.jpg";
 import man3 from "../images/men-03.jpg";
+import { Link } from "react-router-dom";
 
 
 function Men() {
@@ -34,14 +35,10 @@ function Men() {
     ]
 
 
-
-
-
     return (
         <>
-            <div className="men-section">
-                <button id="left"><i class="fa-solid fa-less-than"></i></button>
-                <button id="right"><i class="fa-solid fa-less-than fa-rotate-180"></i></button>
+            <div className="men-section" id="men">
+
                 {
                     men.map((itm) => {
                         return (
@@ -50,15 +47,21 @@ function Men() {
                                     <div className="man-img">
                                         <img src={itm.img} alt="" />
                                         <div className="shop">
-                                            <div className="view">
-                                                {itm.view}
-                                            </div>
-                                            <div className="view">
-                                                {itm.star}
-                                            </div>
-                                            <div className="view">
-                                                {itm.cart}
-                                            </div>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.view}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.star}
+                                                </div>
+                                            </Link>
+                                            <Link to="/singleproduct">
+                                                <div className="view">
+                                                    {itm.cart}
+                                                </div>
+                                            </Link>
                                         </div>
                                     </div>
                                     <div className="title">
@@ -77,6 +80,7 @@ function Men() {
                         )
                     })
                 }
+
             </div>
         </>
     )

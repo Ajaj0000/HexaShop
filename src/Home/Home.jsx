@@ -13,9 +13,9 @@ import { Footer } from "../footer/footer";
 function Home(){
     return(
         <>
-        <Header/>
+        <Header />
         <Screentop/>
-        <Heading head="Men's Latest" detail="Details to details is what makes Hexashop different from the other themes."/>
+        <Heading head="Men's Latest" detail="Details to details is what makes Hexashop different from the other themes." />
         <Men/>
         <Heading head="Women's Latest" detail="Details to details is what makes Hexashop different from the other themes."/>
         <Women/>
