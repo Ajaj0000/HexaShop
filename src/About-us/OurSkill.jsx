@@ -3,12 +3,12 @@ import img1 from "../images/about-left-image.jpg";
 
 function OurSkill() {
 
-    const social = [
-        {
-            id: "1",
-            name: ""
-        }
-    ]
+    // const social = [
+    //     {
+    //         id: "1",
+    //         name: ""
+    //     }
+    // ]
 
     return (
         <>
